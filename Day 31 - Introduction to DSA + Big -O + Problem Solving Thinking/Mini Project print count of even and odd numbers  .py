@@ -11,3 +11,5 @@ for num in numbers:
 
 print("Total Even Numbers :",even_count)
 print("Total Odd numbers :",odd_count) 
+
+# Complexity = O(n)

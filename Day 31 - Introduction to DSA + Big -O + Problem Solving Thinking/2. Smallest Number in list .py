@@ -1,7 +1,7 @@
 #List of numbers 
 numbers=[12,34,32,12,22,11,19,5,9]
 
-# Largest Number 
+# let smallest  Number = 12
 Smallest=numbers[0]
 
 #Tresverse list 
@@ -11,3 +11,5 @@ for num in numbers:
         Smallest = num
 
 print("Largest Number in List :",Smallest)
+
+# Complexity = O(n)
