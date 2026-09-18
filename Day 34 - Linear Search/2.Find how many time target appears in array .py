@@ -5,5 +5,4 @@ count=0
 for i in arr:
     if i == target:
         count+=1
-
-print(f"Number of occurence of {target} : {count}")
+print(f"Number of occurence of {target}  is : {count}")
