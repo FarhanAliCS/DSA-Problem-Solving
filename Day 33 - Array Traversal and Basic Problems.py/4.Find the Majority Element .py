@@ -11,10 +11,10 @@ length=len(arr)//2
 for key , value in frequency.items():
     if value > length:
         print(key)
-        break
-        
+        break      
 
-
+#Time complexity = O(n)
+#Space complexity = O(k)
 
 
     
