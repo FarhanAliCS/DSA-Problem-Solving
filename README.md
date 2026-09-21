@@ -16,9 +16,9 @@ Python 🐍
 
 
 
-Day 31 — Introduction to DSA & Problem Solving
+  ### Day 31 — Introduction to DSA & Problem Solving
 
-📌 Topics Covered
+# 📌 Topics Covered
 
 - Introduction to DSA
 - Data Structures vs Algorithms
@@ -28,13 +28,13 @@ Day 31 — Introduction to DSA & Problem Solving
 - Big-O notation
 - O(1), O(n), O(n²)
 
-🧠 Key Learning
+# 🧠 Key Learning
 
 Learned to solve problems step-by-step:
 
 Understand → Plan → Algorithm → Dry Run → Code → Test → Analyze
 
-🧪 Practice
+# 🧪 Practice
 
 - Find largest number
 - Find smallest number
@@ -57,9 +57,9 @@ Status: Day 31 Completed ✅
 Next: Day 32 — Arrays & Python Lists
 
 
-Day 32 — Arrays & Python Lists
+ ### Day 32 — Arrays & Python Lists
 
-Topics Covered
+# Topics Covered
 
 - Arrays and Python Lists
 - Indexing and Traversal
@@ -70,11 +70,11 @@ Topics Covered
 - Solving Array Problems
 - Optimizing solutions using Dictionaries
 
-Key Learning
+# Key Learning
 
 Learned how to work with arrays/lists and analyze their time and space complexity.
 
-Practice Problems
+# Practice Problems
 
 - Find Second Largest Number
 - Move All Zeros to the End
@@ -91,7 +91,7 @@ Complexity
 - Insert/Delete at Beginning: "O(n)"
 - Pair Sum (optimized): "O(n)"
 
-Goal
+# Goal
 
 Build strong array and problem-solving skills as a foundation for DSA and my AI/ML Engineer journey.
 
@@ -100,9 +100,9 @@ Next: Day 33 — Array Traversal & Basic Problems
 
 
 
-Day 33 — Array Traversal & Basic Problems
+ ### Day 33 — Array Traversal & Basic Problems
 
-Topics Covered
+# Topics Covered
 
 - Array Traversal
 - Right-to-Left Traversal
@@ -113,7 +113,7 @@ Topics Covered
 - Maximum Subarray Sum
 - Kadane's Algorithm
 
-Practice Problems
+# Practice Problems
 
 - Maximum Difference
 - Leaders in an Array
@@ -121,7 +121,7 @@ Practice Problems
 - Majority Element
 - Maximum Subarray Sum
 
-Key Learning
+# Key Learning
 
 Learned how to traverse arrays efficiently and solve problems using techniques like:
 
@@ -134,7 +134,7 @@ Complexity
 
 Most solutions were optimized to O(n) time with efficient use of space.
 
-Goal
+# Goal
 
 Improve array problem-solving skills and build a strong foundation for DSA and my AI/ML Engineer journey.
 
@@ -142,9 +142,9 @@ Status: Day 33 Completed ✅
 Next: Day 34 — Linear Search
 
 
-Day 34 — Linear Search
+ ### Day 34 — Linear Search
 
-Topics Covered
+# Topics Covered
 
 - Linear Search
 - First Occurrence
@@ -156,7 +156,7 @@ Topics Covered
 - Finding Duplicates
 - Finding Missing Positive Number
 
-Practice Problems
+# Practice Problems
 
 - First occurrence of a target
 - Count target occurrences
@@ -168,7 +168,7 @@ Practice Problems
 - First missing positive
 - Conditional linear search
 
-Key Learning
+# Key Learning
 
 Learned how to search through an array element by element and solve different problems using conditions, loops, sets, and efficient traversal.
 
@@ -177,16 +177,16 @@ Complexity
 - Time: O(n) for standard linear search
 - Space: O(1) for basic searches
 
-Goal
+# Goal
 
 Improve searching and problem-solving skills as part of my DSA and AI/ML Engineer journey.
 
 Status: Day 34 Completed ✅
 Next: Day 35 — Binary Search 🚀
 
-Day 35 — Binary Search
+ ### Day 35 — Binary Search
 
-Topics Covered
+# Topics Covered
 
 - Introduction to Binary Search
 - Binary Search Algorithm
@@ -203,13 +203,13 @@ Topics Covered
 - Integer Square Root
 - Peak Element
 
-Key Learning
+# Key Learning
 
 Learned how Binary Search repeatedly divides a sorted search space into half to solve problems efficiently.
 
 Also learned that Binary Search can be used for more than exact searching, including finding boundaries, insertion positions, valid ranges, square roots, and peak elements.
 
-Important Patterns
+# Important Patterns
 
 - First occurrence → search left after finding the target
 - Last occurrence → search right after finding the target
@@ -225,7 +225,7 @@ Complexity
 - Binary Search Time: O(log n)
 - Iterative Binary Search Space: O(1)
 
-Practice Problems
+# Practice Problems
 
 - Basic Binary Search
 - Target Not Found
@@ -239,10 +239,54 @@ Practice Problems
 - Integer Square Root
 - Peak Element
 
-Goal
+# Goal
 
 Build strong Binary Search and problem-solving skills as part of my DSA journey toward becoming an AI/ML Engineer.
 
 Status: Day 35 Completed ✅
 
 Next: Day 36 — Bubble Sort 🚀
+
+
+
+ ### Day 36 — Bubble Sort
+
+# Topics Covered
+
+- Introduction to Bubble Sort
+- Comparing Adjacent Elements
+- Swapping Elements
+- Bubble Sort in Ascending Order
+- Bubble Sort in Descending Order
+- Optimized Bubble Sort
+- Early Stopping
+- Counting Swaps
+
+# Key Learning
+
+Learned how Bubble Sort repeatedly compares adjacent elements and swaps them when they are in the wrong order.
+
+Also learned how to optimize Bubble Sort by reducing unnecessary comparisons and stopping early when the array is already sorted.
+
+# Practice Problems
+
+- Perform One Bubble Sort Pass
+- Complete Bubble Sort
+- Bubble Sort in Descending Order
+- Bubble Sort with Early Stopping
+- Count Number of Swaps
+
+# Complexity
+
+- Worst-case Time: O(n²)
+- Average Time: O(n²)
+- Best-case Time with Early Stopping: O(n)
+- Space: O(1)
+
+# Goal
+
+Build strong sorting and problem-solving skills as part of my DSA journey toward becoming an AI/ML Engineer.
+
+Status: Day 36 Completed ✅
+
+Next: Day 37 — Selection Sort 🚀
