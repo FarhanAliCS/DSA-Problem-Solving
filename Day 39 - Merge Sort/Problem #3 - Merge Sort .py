@@ -1,12 +1,12 @@
-def merge_fun(arr):
+def merge_sort(arr):
     if len(arr) <= 1:
         return arr
     mid=len(arr)//2
     left=arr[:mid]
     right=arr[mid:]
 
-    left=merge_fun(left)
-    right=merge_fun(right)
+    left=merge_sort(left)
+    right=merge_sort(right)
 
     sort=[]
     i=0
@@ -31,5 +31,5 @@ def merge_fun(arr):
     return sort
 
 arr=[8,3,5,1,9,2]
-print(merge_fun(arr))
+print(merge_sort(arr))
 

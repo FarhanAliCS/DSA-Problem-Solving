@@ -13,8 +13,6 @@ while i < len(left) and j < len(right):
     else:
         sort.append(right[j])
         j+=1
-print(i)
-print(j)
 while i<len(left):
     sort.append(left[i])
     i+=1
