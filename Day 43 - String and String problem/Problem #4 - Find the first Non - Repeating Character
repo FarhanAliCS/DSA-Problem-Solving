@@ -1,0 +1,19 @@
+def first_non_repetible(s):
+    frequency={}
+    for char in s:
+        if char in frequency:
+            frequency[char]+=1
+        else:
+            frequency[char]=1
+    first_char=""
+    for key,value in frequency.items():
+        if value == 1:
+            first_char=key
+            break
+
+    if not first_char:
+        return None
+    return first_char
+
+s=input("Enter string :")
+print(first_non_repetible(s))
