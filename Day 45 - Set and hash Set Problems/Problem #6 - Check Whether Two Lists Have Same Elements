@@ -1,0 +1,11 @@
+def compare_lists(list1 , list2):
+    list1=set(list1)
+    list2=set(list2)
+
+    if list1 == list2:
+        return True
+    return False
+
+list1=[1,2,3,2,1]
+list2=[1,2,3]
+print(compare_lists(list1 , list2))

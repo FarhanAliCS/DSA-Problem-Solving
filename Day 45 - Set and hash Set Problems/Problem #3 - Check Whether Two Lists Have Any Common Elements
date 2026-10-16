@@ -1,0 +1,11 @@
+def check_common(list1 , list2):
+    list2=set(list2)
+    for i in range(len(list1)):
+        if list1[i] in list2 :
+            return True
+        
+    return False
+
+list1 = [10, 20, 30, 40]
+list2 = [50, 60, 30, 70]
+print(check_common(list1 , list2))

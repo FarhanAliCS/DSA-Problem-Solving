@@ -1,0 +1,14 @@
+def duplicate_elements(list1 , list2):
+    duplicate=[]
+    list2=set(list2)
+    seen=set()
+    for i in range(len(list1)):
+        if list1[i] in list2 and list1[i] not in seen:
+            seen.add(list1[i])
+            duplicate.append(list1[i])
+
+    return duplicate
+
+list1 = [1, 2, 2, 3, 4, 5]
+list2 = [2, 2, 4, 4, 6]
+print(duplicate_elements(list1 , list2))

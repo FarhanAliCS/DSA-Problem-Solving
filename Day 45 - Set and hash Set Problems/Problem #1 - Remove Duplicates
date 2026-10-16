@@ -1,0 +1,9 @@
+def remove_duplicate(numbers):
+    unique=set()
+
+    for num in numbers:
+        unique.add(num)
+
+    return unique
+numbers=[1,1,2,2,3,3]
+print(remove_duplicate(numbers))
