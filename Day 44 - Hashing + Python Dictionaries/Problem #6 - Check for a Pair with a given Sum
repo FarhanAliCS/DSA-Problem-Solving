@@ -1,0 +1,16 @@
+def pair_sum(numbers,target):
+    seen={}
+    for num in numbers:
+        required=target - num
+        if required in seen:
+            return True
+        else :
+              seen[num]=1
+    return False
+
+        
+        
+
+numbers=[5,3,7,2,9]
+target=11
+print(pair_sum(numbers,target))
