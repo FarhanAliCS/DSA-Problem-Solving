@@ -3,7 +3,7 @@ def two_sum(num,target):
     for i in range(len(num)):
         required= target - num[i]
         if required in seen:
-            return i , seen[required]
+            return seen[required] , i
         else:
             seen[num[i]]=i
 
