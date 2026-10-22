@@ -1,0 +1,30 @@
+def closest_pair(numbers, target):
+    if len(numbers) < 2 :
+        return None
+    left=0
+    right=len(numbers)-1
+
+    best_pair=(numbers[left] , numbers[right])
+    smallest_differnce=abs(target - sum(best_pair))
+
+    while left < right :
+        total=(numbers[left] + numbers[right])
+        differnce=abs(target - total)
+
+        if differnce < smallest_differnce :
+            smallest_differnce=differnce
+            best_pair=(numbers[left] , numbers[right])
+
+        if total > target :
+            right-=1
+        elif total < target :
+            left+=1
+        else:
+            return best_pair
+
+    return best_pair
+
+numbers = [1, 2, 4, 6, 8, 10]
+target = 13
+
+print(closest_pair(numbers, target))

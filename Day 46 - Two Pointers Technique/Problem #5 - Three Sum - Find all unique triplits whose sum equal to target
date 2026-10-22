@@ -1,0 +1,34 @@
+def three_sum(numbers , target):
+    if len(numbers) < 3 :
+        return None
+    pairs=[]
+    for i in range(len(numbers) - 2):
+        if i > 0 and numbers[i] == numbers[i - 1]:
+            continue
+        first=numbers[i]
+        remaining=target - first
+        left=i+1
+        right=len(numbers)-1
+        while left < right :
+            total=numbers[left] + numbers[right]
+            if total < remaining :
+                left+=1
+            elif total > remaining :
+                right-=1
+            else:
+                pairs.append((first, numbers[left] , numbers[right]))
+                left_value=numbers[left]
+                right_value=numbers[right]
+
+                while left < right and left_value == numbers[left]:
+                    left+=1
+                while left < right and right_value == numbers[right]:
+                    right-=1
+
+    return pairs
+
+
+
+numbers = [-2, -2, 0, 0, 2, 2]
+target = 0
+print(three_sum(numbers , target))

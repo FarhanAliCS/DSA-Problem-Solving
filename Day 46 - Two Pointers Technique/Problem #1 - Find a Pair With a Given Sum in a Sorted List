@@ -1,0 +1,26 @@
+# Find Fair that Sum is equal to target 
+# . if Exist return True
+# . If Not exists return False
+
+def pair_sum(numbers , target):
+    left=0
+    right=len(numbers)-1
+    total=0
+    while left < right:
+        
+        total=numbers[left] + numbers[right]
+
+        if total > target :
+            right-=1
+        elif total < target :
+            left+=1
+        else:
+            return True
+        
+    return False
+
+
+
+numbers=[1,2,4,6,8,9,11]
+target=14
+print(pair_sum(numbers , target))

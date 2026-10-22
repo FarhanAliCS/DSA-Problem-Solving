@@ -1,0 +1,39 @@
+def closest_triplit(numbers , target):
+    if len(numbers) < 3 :
+        return []
+
+    best_sum=None
+    smallest_difference=float("inf")
+    for i in range(len(numbers) -2):
+        if i > 0 and numbers[i] == numbers[i-1]:
+            continue
+        first=numbers[i]
+        
+        left=i+1
+        right=len(numbers) -1
+
+
+        while left < right:
+            total=first + numbers[left] + numbers[right]
+            difference=abs(target - total)
+
+            if difference < smallest_difference:
+                smallest_difference=difference
+
+                best_sum=total
+
+            if total > target :
+                right-=1
+            elif total < target :
+                left+=1
+            else:
+                best_sum
+
+
+    return best_sum
+            
+
+numbers=[-4,-1,1,2,5,8]
+target=4
+
+print(closest_triplit(numbers , target))
