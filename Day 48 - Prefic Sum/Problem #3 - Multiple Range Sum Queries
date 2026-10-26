@@ -12,7 +12,6 @@ def multiple_range_sums(numbers , queries):
 
     for left , right in queries:
         if left == 0:
-            
             result.append(prefix[right])
         else:
             total_sums=prefix[right] - prefix[left - 1]

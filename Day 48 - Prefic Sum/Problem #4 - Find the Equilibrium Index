@@ -1,4 +1,3 @@
-
 def equilibrium_index(numbers):
     if len(numbers) <= 0:
         return None
