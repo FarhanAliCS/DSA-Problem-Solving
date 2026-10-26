@@ -1,0 +1,17 @@
+def min_window_sum(numbers, k):
+    if k <= 0 or k > len(numbers):
+        return None
+
+    current_sum=sum(numbers[:k])
+    minimum=current_sum
+
+    for i in range(k , len(numbers)):
+        current_sum = current_sum - numbers[i - k] + numbers[i]
+
+        if current_sum < minimum:
+            minimum=current_sum
+
+    return minimum
+numbers = [4, 2, 1, 7, 3, 2]
+k = 3
+print(min_window_sum(numbers , k))

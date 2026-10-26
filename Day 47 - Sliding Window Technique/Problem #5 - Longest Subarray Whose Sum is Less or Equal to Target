@@ -1,0 +1,22 @@
+def longest_subarray_sum(numbers , target):
+    if len(numbers) <= 0 :
+        return 0
+    left=0
+    maximum_window=0
+    current_sum=0
+
+    for right in range(len(numbers)):
+        current_sum+=numbers[right]
+
+        while current_sum > target :
+            current_sum-=numbers[left]
+            left+=1
+
+        maximum_window=max(maximum_window , right - left + 1)
+
+    return maximum_window
+        
+
+numbers=[2,1,3,2,1,1,1]
+target=5
+print(longest_subarray_sum(numbers , target))

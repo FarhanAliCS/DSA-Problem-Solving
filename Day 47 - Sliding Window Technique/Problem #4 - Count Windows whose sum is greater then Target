@@ -1,0 +1,24 @@
+def count_window_greater(numbers, k, target):
+    if k <= 0 or k > len(numbers):
+        return None
+
+    current_sum = sum(numbers[:k])
+    count = 0
+
+    if current_sum > target:
+        count += 1
+
+    for i in range(k, len(numbers)):
+        current_sum = current_sum - numbers[i - k] + numbers[i]
+
+        if current_sum > target:
+            count += 1
+
+    return count
+
+
+numbers = [2, 1, 5, 1, 3, 2]
+k = 3
+target = 7
+
+print(count_window_greater(numbers, k, target))

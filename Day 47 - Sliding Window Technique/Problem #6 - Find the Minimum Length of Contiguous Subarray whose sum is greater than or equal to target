@@ -1,0 +1,24 @@
+def min_subarray_length(numbers, target):
+    if len(numbers) <= 0 :
+        return 0
+
+    left=0
+    minimum_window=float("inf")
+    current_sum=0
+
+    for right in range(len(numbers)):
+        current_sum+=numbers[right]
+
+        while current_sum >= target :
+            minimum_window=min(minimum_window , right - left + 1)
+            current_sum-=numbers[left]
+            left+=1
+
+    if minimum_window == float("inf"):
+        return 0
+
+    return minimum_window
+
+numbers = [2, 3, 1, 2, 4, 3]
+target = 7
+print(min_subarray_length(numbers , target))
