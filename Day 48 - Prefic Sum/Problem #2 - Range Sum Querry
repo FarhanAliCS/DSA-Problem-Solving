@@ -1,0 +1,26 @@
+def range_sum(numbers,left, right):
+    if len(numbers) <= 0 :
+        return None
+
+    if left < 0 or right >= len(numbers) or left > right:
+        return None
+    
+    prefix=[]
+    total=0
+    total_sum=0
+    for num in numbers:
+        total+=num
+        prefix.append(total)
+    if left > 0 :
+        total_sum=prefix[right] - prefix[left - 1]
+    else:
+        return prefix[right]
+
+    return total_sum
+        
+        
+
+numbers=[3,1,4,2,5]
+left=1
+right=3
+print(range_sum(numbers,left, right))

@@ -1,0 +1,35 @@
+def multiple_range_sums(numbers , queries):
+    if len(numbers) <= 0 or not queries :
+        return None
+    total_sums=0
+    total=0
+    prefix=[]
+    result=[]
+
+    for num in numbers:
+        total+=num
+        prefix.append(total)
+
+    for left , right in queries:
+        if left == 0:
+            
+            result.append(prefix[right])
+        else:
+            total_sums=prefix[right] - prefix[left - 1]
+            result.append(total_sums)
+ 
+
+    return result
+
+numbers = [2, 4, 1, 5, 3]
+
+queries = [
+    (0, 2),
+    (1, 3),
+    (2, 4)
+]
+print(multiple_range_sums(numbers , queries))
+        
+
+
+    
