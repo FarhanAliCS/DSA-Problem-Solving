@@ -1,0 +1,9 @@
+def is_empty(stack):
+    if len(stack) == 0:
+        return True
+    return False
+
+stack1=[]
+stack2=[10,29]
+print(is_empty(stack1))
+print(is_empty(stack2))

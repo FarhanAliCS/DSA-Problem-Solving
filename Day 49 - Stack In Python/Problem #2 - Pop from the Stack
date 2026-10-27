@@ -1,0 +1,12 @@
+def pop_stack(stack ):
+    if len(stack) ==0:
+        return None
+        
+    remove = stack.pop()
+    return remove
+
+stack=[20 , 30 , 40]
+remove=pop_stack(stack)
+print("Remove :",remove)
+print("Stack :",stack)
+

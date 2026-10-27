@@ -1,0 +1,14 @@
+def reverse_string_stack(text):
+    stack=[]
+    reverse_stack=[]
+    for char in text:
+        stack.append(char)
+    while len(stack) >0 :
+        remove=stack.pop()
+        reverse_stack.append(remove)
+    result="".join(reverse_stack)
+
+    return result
+
+text="Python"
+print(reverse_string_stack(text))

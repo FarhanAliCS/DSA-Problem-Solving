@@ -1,0 +1,32 @@
+def push_stack(stack , value):
+    stack.append(value)
+    return stack
+
+def pop_stack(stack):
+    if len(stack) == 0:
+        return None
+
+    remove=stack.pop()
+    return remove
+
+def peek_stack(stack):
+    if len(stack) == 0:
+        return None
+    
+    peek=stack[-1]
+    return peek
+
+def is_empty(stack):
+    return len(stack) == 0
+
+stack=[]
+
+stack=push_stack(stack , 10)
+stack=push_stack(stack , 20)
+stack=push_stack(stack , 30)
+
+print("Stack :",stack)
+print("Top :",peek_stack(stack))
+print("Removed :",pop_stack(stack))
+print("Stack after Pop :",stack)
+print("Is Empty :",is_empty(stack))

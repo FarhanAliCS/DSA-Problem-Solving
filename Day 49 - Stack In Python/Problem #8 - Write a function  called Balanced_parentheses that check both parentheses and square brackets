@@ -1,0 +1,24 @@
+def balanced_parentheses(text):
+    stack=[]
+    for char in text:
+        if char == "(":
+            stack.append(char)
+        elif char == '[':
+            stack.append(char)
+        elif char == ")":
+            if len(stack) == 0:
+                return False
+            if stack[-1] != "(":
+                return False
+            stack.pop()
+        elif char == "]":
+            if len(stack) == 0:
+                return False
+            if stack[-1]  != '[':
+                return False
+            stack.pop()
+    return len(stack) == 0
+
+print(balanced_parentheses("([])"))  # True
+print(balanced_parentheses("([)]"))  # False
+print(balanced_parentheses("])"))    # False

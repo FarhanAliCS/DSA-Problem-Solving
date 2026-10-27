@@ -1,0 +1,19 @@
+def balanced_parentheses(text):
+    if len(text) == 0 :
+        return None
+
+    stack=[]
+    for char in text:
+        if char == "(":
+            stack.append(char)
+        elif char == ')':
+            if len(stack) == 0 :
+                return False
+            else:
+                stack.pop()
+
+    return len(stack) == 0
+
+
+text="((()))"
+print(balanced_parentheses(text))

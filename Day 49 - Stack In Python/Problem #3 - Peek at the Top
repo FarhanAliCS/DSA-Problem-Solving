@@ -1,0 +1,10 @@
+def peek_stack(stack):
+    if len(stack) == 0:
+        return None
+    peek=stack[-1]
+    return peek
+
+
+stack=[20 , 30 , 40]
+print("Top :",peek_stack(stack))
+print("Stack :",stack)
