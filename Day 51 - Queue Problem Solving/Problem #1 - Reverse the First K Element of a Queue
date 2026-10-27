@@ -1,0 +1,34 @@
+from collections import deque
+def reverse_first_k(queue , k):
+    if k <= 0 or k > len(queue):
+        return queue
+
+    stack=[]
+
+    for _ in range(k):
+        remove=queue.popleft()
+        stack.append(remove)
+    
+    while stack:
+        queue.append(stack.pop())
+
+    for _ in range(len(queue) - k ):
+        queue.append(queue.popleft())
+
+    return queue
+
+   
+
+   
+
+
+queue = deque([10, 20, 30, 40, 50])
+
+print(reverse_first_k(queue, 1))
+# deque([10, 20, 30, 40, 50])
+
+print(reverse_first_k(queue, 5))
+# deque([50, 40, 30, 20, 10])
+
+print(reverse_first_k(queue, 0))
+# Queue remains unchanged

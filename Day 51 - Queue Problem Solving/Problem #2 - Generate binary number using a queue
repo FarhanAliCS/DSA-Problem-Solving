@@ -1,0 +1,18 @@
+from collections import deque
+def generate_binary(n):
+    if n <=0 :
+        return []
+    queue=deque(["1"])
+    result=[]
+
+    for _ in range(n):
+        numbers=queue.popleft()
+        result.append(numbers)
+
+        queue.append(numbers + "0")
+        queue.append(numbers + "1")
+
+    return result
+
+n=8
+print(generate_binary(n))
