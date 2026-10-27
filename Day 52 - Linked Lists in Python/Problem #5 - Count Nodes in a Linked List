@@ -1,0 +1,46 @@
+class Node:
+    def __init__(self , data):
+        self.data=data
+        self.next = None
+
+def linked_list():
+        head=None
+        tail=None
+        while True:
+            try:
+                value=input("Enter node to add to linked list or enter 'Done' to exit :").lower()
+                if value == "done":
+                    break
+                else:
+                  value=int(value)
+            except ValueError:
+                print("Please enter a valid integer or enter 'done' !")
+                continue
+            
+
+            
+            new_node=Node(value)
+            if head is None:
+                head=new_node
+                tail=new_node
+            else:
+                tail.next=new_node
+                tail=new_node
+
+        return head
+
+
+def count_nodes(head):
+    count=0
+    current=head
+    while current is not None:
+        count+=1
+        current=current.next
+
+    return count
+
+head=linked_list()
+print("Total Nodes are :",count_nodes(head))
+
+
+

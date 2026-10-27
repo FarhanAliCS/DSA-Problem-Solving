@@ -1,0 +1,27 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+
+values=[10,20,30,40,50]
+head=None
+tail=None
+
+for num in values:
+    new_node=Node(num)
+    
+    if head is None:
+        head = new_node
+        tail = new_node
+
+    else:
+        tail.next=new_node
+        tail=new_node
+
+current=head
+
+while current is not None:
+    print(current.data)
+    current=current.next
+
+    
