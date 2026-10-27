@@ -1,0 +1,11 @@
+
+def dequeue(queue):
+    if len(queue) == 0:
+        return None
+    removed=queue.pop(0)
+    return removed
+
+queue = [40, 50, 60]
+
+print("Removed value :",dequeue(queue))  
+print("Queue : " ,queue)    

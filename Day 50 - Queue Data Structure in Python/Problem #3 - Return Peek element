@@ -1,0 +1,9 @@
+def peek(queue):
+    if len(queue) == 0:
+        return None
+    peek=queue[0]
+    return peek
+queue = [50, 60, 70]
+
+print("Peek Element :",peek(queue))  # 50
+print("Queue :" , queue)        # [50, 60, 70]

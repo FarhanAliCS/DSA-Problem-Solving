@@ -1,0 +1,8 @@
+def enqueue(queue , value):
+    queue.append(value)
+    return queue
+
+queue=[]
+print(enqueue(queue , 40))
+print(enqueue(queue , 50))
+print(enqueue(queue , 60))

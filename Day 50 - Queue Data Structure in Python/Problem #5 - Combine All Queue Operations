@@ -1,0 +1,27 @@
+def enqueue(queue , value):
+    queue.append(value)
+    return queue
+
+def dequeue(queue):
+    if len(queue) == 0:
+        return None
+    
+    removed=queue.pop(0)
+    return removed
+
+def peek_value(queue):
+    if len(queue) == 0:
+        return None
+    
+    peek=queue[0]
+    return peek
+
+def is_empty(queue):
+    return not queue
+
+queue=[]
+print(enqueue(queue , 10))
+print(enqueue(queue ,20))
+print("Removed value :",dequeue(queue))
+print("Peek value :",peek_value(queue))
+print("Empty Or Not :",is_empty(queue))
