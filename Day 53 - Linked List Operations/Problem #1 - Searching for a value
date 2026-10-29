@@ -1,0 +1,37 @@
+class Node:
+    def __init__(self , data):
+        self.data=data
+        self.next=None
+
+def linked_list(list):
+    head=None
+    tail=None
+    for num in list:
+        new_node=Node(num)
+
+        if head is None:
+            head=new_node
+            tail=new_node
+        else:
+            tail.next=new_node
+            tail=new_node
+
+    return head
+
+def search_value(head , target):
+    current=head
+    while current is not None:
+        if current.data == target:
+            return True
+        current=current.next
+    
+    return False
+
+list=[10,20,30,40,50]
+target=int(input("Enter target value :"))
+head=linked_list(list)
+print(search_value(head , target))
+
+
+        
+        

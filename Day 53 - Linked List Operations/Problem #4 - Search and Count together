@@ -1,0 +1,40 @@
+class Node:
+   def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def linked_list():
+    values = [10, 20, 10, 39, 10]
+    head = None
+    tail = None
+
+
+    for value in values:
+        new_node = Node(value)
+
+        if head is None:
+            head = new_node
+            tail = new_node
+        else:
+            tail.next = new_node
+            tail = new_node
+
+    return head
+
+def count_occurrences(head, target):
+    count = 0
+    current = head
+
+    while current is not None:
+        if current.data == target:
+            count += 1
+
+        current = current.next
+
+    return count
+
+
+head = linked_list()
+target = 10
+print(f"The value {target} occurs {count_occurrences(head, target)} times.")
+

@@ -1,0 +1,42 @@
+class Node:
+    def __init__(self , data):
+        self.data=data
+        self.next=None
+
+def linked_list():
+    values=[34,23,45,56,67,78]
+
+    head=None
+    tail=None
+    for num in values:
+        new_node=Node(num)
+
+        if head is None:
+            head=new_node
+            tail=new_node
+        else:
+            tail.next=new_node
+            tail=new_node
+
+    return head
+
+
+def insert_beginning(head , value):
+    new_node = Node(value)
+    new_node.next = head
+    return new_node
+
+
+def display(head):
+    current=head
+    while current is not None:
+        print(current.data)
+        current=current.next
+
+
+head=linked_list()
+head=insert_beginning(head , 90)
+display(head)
+    
+
+        

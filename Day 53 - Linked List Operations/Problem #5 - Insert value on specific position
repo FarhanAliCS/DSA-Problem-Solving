@@ -1,0 +1,63 @@
+class Node:
+    def __init__(self ,data):
+        self.data=data
+        self.next=None
+
+def linked_list():
+    values=[10,20,30,40]
+    head=None
+    tail=None
+
+    for value in values:
+        new_node=Node(value)
+        if head is None:
+            head=new_node
+            tail=new_node
+        else:
+            tail.next=new_node
+            tail=new_node
+    return head
+
+def insert_at_position(head, value, position):
+    if position < 0:
+        raise ValueError("Position cannot be negative.")
+
+    new_node = Node(value)
+
+    if position == 0:
+        new_node.next = head
+        return new_node
+
+    current = head
+
+    for _ in range(position - 1):
+        if current is None:
+            raise IndexError("Position is out of range.")
+
+        current = current.next
+
+    if current is None:
+        raise IndexError("Position is out of range.")
+
+    new_node.next = current.next
+    current.next = new_node
+
+    return head
+
+
+
+
+    
+
+
+def display(head):
+    current=head
+    while current is not None:
+        print(current.data)
+        current=current.next
+
+head=linked_list()
+head=insert_at_position(head , 89 ,1)
+display(head)
+
+    
