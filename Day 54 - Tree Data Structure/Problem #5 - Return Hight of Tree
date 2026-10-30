@@ -1,0 +1,27 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.children=[]
+
+def tree():
+    root=Node(10)
+    root.children.append(Node(20))
+    root.children.append(Node(30))
+    root.children[0].children.append(Node(40))
+    root.children[0].children.append(Node(50))
+    return root
+
+def tree_height(node):
+    if node is None:
+        return -1
+
+    maximum_height = -1
+
+    for child in node.children:
+        maximum_height = max(maximum_height,tree_height(child))
+    maximum_height+=1
+
+    return maximum_height
+
+root=tree()
+print("Height :",tree_height(root))

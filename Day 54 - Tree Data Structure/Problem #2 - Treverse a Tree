@@ -1,0 +1,22 @@
+class Node:
+    def __init__(self , data):
+        self.data=data
+        self.children=[]
+
+def print_tree(node):
+    if node is None:
+        return 
+
+    print(node.data)
+
+    for child in node.children:
+        print_tree(child)
+
+root=Node(10)
+root.children.append(Node(20))
+root.children.append(Node(30))
+root.children[0].children.append(Node(40))
+root.children[0].children.append(Node(50))
+print_tree(root)
+
+    

@@ -1,0 +1,25 @@
+class Node:
+    def __init__(self , data):
+        self.data=data
+        self.children=[]
+
+def tree():
+    root=Node(10)
+    root.children.append(Node(20))
+    root.children.append(Node(30))
+    root.children[0].children.append(Node(40))
+    root.children[0].children.append(Node(50))
+    return root
+
+def count_nodes(node):
+    if node is None:
+        return 0
+    count=1
+    for child in node.children:
+        
+        count+=count_nodes(child)
+    return count
+
+root=tree()
+
+print("Total Nodes :" , count_nodes(root ))

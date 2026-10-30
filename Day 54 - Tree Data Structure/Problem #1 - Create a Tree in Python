@@ -1,0 +1,18 @@
+class Node:
+    def __init__(self , data):
+        self.data=data
+        self.children=[]
+
+
+root=Node(10)
+root.children.append(Node(20))
+root.children.append(Node(30))
+root.children[0].children.append(Node(40))
+root.children[0].children.append(Node(50))
+
+print(root.data)
+print(root.children[0].data)
+print(root.children[1].data)
+print(root.children[0].children[0].data)
+print(root.children[0].children[1].data)
+    

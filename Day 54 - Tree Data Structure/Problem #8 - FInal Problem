@@ -1,0 +1,83 @@
+# Count total nodes.
+# Count leaf nodes.
+# Find maximum value.
+# Calculate tree height.
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.children=[]
+
+def create_children(node):
+    number=int(input(f"How many children you want for {node.data} :"))
+    if number < 0:
+        raise ValueError("children number must not be negitive")
+    for i in range(number):
+        value=int(input(f"Enter value for child {i+1} of {node.data}:"))
+        new_node=Node(value)
+        node.children.append(new_node)
+        create_children(new_node)
+
+def tree():
+    root=int(input("Enter Root value for a tree :"))
+    root=Node(root)
+    create_children(root)
+    return root
+
+def treverse_tree(node):
+    if node is None:
+        return 
+
+    print(node.data)
+    for child in node.children:
+        treverse_tree(child)
+
+def count_nodes(node):
+    if node is None:
+        return 0
+    count=1
+    for child in node.children:
+        count+=count_nodes(child)
+
+    return count
+
+def count_leaf(node):
+    if node is None:
+        return 0
+    if len(node.children) == 0:
+        return 1
+    count=0
+    for child in node.children:
+        count+=count_leaf(child)
+    return count
+
+def maximum_value(node):
+    if node is None:
+        return float("-inf")
+    maximum=float("-inf")
+    maximum=max(maximum , node.data)
+    for child in node.children:
+        maximum=max(maximum , maximum_value(child))
+
+    return maximum
+
+def tree_hight(node):
+    if node is None:
+        return -1
+
+    maximum_hight=-1
+    for child in node.children:
+        maximum_hight=max(maximum_hight , tree_hight(child))
+    
+
+    return maximum_hight+1
+
+
+root=tree()
+print("Total Number of Nodes :",count_nodes(root))
+print("Total Leaf Nodes :", count_leaf(root))
+print("Maximum value in a tree :",maximum_value(root))
+print("Tree hight is :",tree_hight(root))
+print("\nTree Treversel ")
+treverse_tree(root)
+
+    
