@@ -16,11 +16,13 @@ def binary_tree():
 
 def postorder_treversel(node):
     if node is None:
-        return 0
+        return 
     left=postorder_treversel(node.left)
     right=postorder_treversel(node.right) 
-    return 1+right+left 
+    print(node.data)
+
+    
 
 
 root=binary_tree()
-print(postorder_treversel(root))
+postorder_treversel(root)
